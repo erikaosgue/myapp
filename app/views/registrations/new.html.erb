@@ -1,0 +1,29 @@
+<h1> Sing Up </h1>
+
+<%# this form will be submiting the info and doing a post request to the url: sing_up %>
+<%= form_with model: @user, url: sing_up_path do |form| %>
+
+    <% if @user.errors.any? %>
+        <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do | messages| %>
+                <div><%= messages %></div>
+            <% end %>
+        </div>
+    <% end %>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "myname@hello.com" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password"   %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password_confirmation%>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit "Sing up", class: "btn btn-primary" %>
+    </div>
+<% end %>

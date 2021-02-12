@@ -1,7 +1,7 @@
-<h1> Sing Up </h1>
+<h1> Sign Up </h1>
 
-<%# this form will be submiting the info and doing a post request to the url: sing_up %>
-<%= form_with model: @user, url: sing_up_path do |form| %>
+<%# this form will be submiting the info and doing a post request to the url: sign_up %>
+<%= form_with model: @user, url: sign_up_path do |form| %>
 
     <% if @user.errors.any? %>
         <div class="alert alert-danger">
@@ -24,6 +24,6 @@
     </div>
 
     <div class="mb-3">
-        <%= form.submit "Sing up", class: "btn btn-primary" %>
+        <%= form.submit "Sign up", class: "btn btn-primary" %>
     </div>
 <% end %>

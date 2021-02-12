@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   # Get /about http.1.1
   get "about", to: "about#index"
 
-  get "sing_up", to: "registrations#new"
-  post "sing_up", to: "registrations#create"
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
   
   root to: "main#index"
   # get "/", to: "main#index"
